@@ -1,0 +1,149 @@
+1.Do the below programs in anonymous function & IIFE
+ 
+ 1.Print odd numbers in an array
+ans:-
+var odd=function(a){
+var res=[];
+for(let i=0;i<a.length;i++){
+if(a[i]%2===0){
+res.push(a[i]);
+}}return res;
+}
+console.log(odd([1,2,3,4]));
+Output:
+[1,3]
+
+2.Convert all the strings to title caps in a string array
+ans:- 
+var b=function (a) {
+  a = a.toLowerCase().split(' ');
+  for (var i = 0; i < a.length; i++) {
+    a[i] = a[i].charAt(0).toUpperCase() + a[i].slice(1); 
+  }
+  return a.join(' ');
+}
+console.log(b('ami yFyc'));
+Output:
+Ami Yfyc
+
+3.Sum of all numbers in an array
+ans:-
+var sum=0;
+var sumarr=function(a){
+for(let i=0;i<a.length;i++){
+sum=sum+a[i];}
+return sum;}
+console.log(sumarr([1,2,3,4]));
+Output:
+10
+
+4.Return all the prime numbers in an array
+ans:-
+var a=[];
+var arr=[3, 12, 50, 23, 0];
+function prime(number){
+if (number <= 1) {
+    return false;
+  } else {
+    for (let j = 2; j < number; j++) {
+      if (number % j === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}  
+ for(let i=0;i<arr.length;i++){
+ const isPrime = prime (arr[i]);
+     if (isPrime) {
+      a.push(arr[i]);
+    }
+}
+console.log(a);
+ Output:
+[ 3, 23 ]
+
+
+5.Return all the palindromes in an array
+var isPalindrome = function (u) {
+    var s=u[0];
+ var c=u[0].split(',');
+
+    for(let i=0;i<s.length;i++){
+    if (c[i] == c[i].split('').reverse().join('')) {
+        return(c[i]);
+    }
+   
+}}
+console.log(isPalindrome(['juy',"sts",'ahs']));
+Output:-
+sts
+
+6.Return median of two sorted arrays of same size
+ans:-
+
+7.Remove duplicates from an array
+ans:-
+var h=function(arr){
+var c=(arr.sort((a,b)=>{
+return (a-b);}));
+var d=[];
+for(var i=0;i<c.length;i++){
+  if  (c[i]!==c[i+1]){
+      d.push(c[i]);
+  }
+}
+console.log(d);
+}([7,7,9,4,3,9,2,5])
+Output:
+[ 2, 3, 4, 5, 7, 9 ]
+
+8.Rotate an array by k times
+ans:-
+
+3.Do the below programs in arrow functions
+
+ 1. Print odd numbers in an array
+ans:-
+var a=[1,2,3,4];
+var odd=a.filter((element)=>{return element%2!==0;});
+console.log(odd);
+Output:
+[ 1, 3 ]
+
+ 2.Convert all the strings to title caps in a string array
+ans:-
+var b=(a)=> {
+  a = a.toLowerCase().split(' ');
+  for (var i = 0; i < a.length; i++) {
+    a[i] = a[i].charAt(0).toUpperCase() + a[i].slice(1); 
+  }
+  return a.join(' ');
+}
+console.log(b('ami yFyc'));
+Output:
+Ami Yfyc
+
+ 3.Sum of all numbers in an array
+ans:-
+var a=[1,2,3,4];
+var sum=((acc,ele)=>acc+ele);
+console.log(a.reduce(sum));
+Output:
+10
+4.Return all the prime numbers in an array
+ans:-
+var a = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+a = a.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+console.log(a);
+
+Output:
+[ 2, 3, 5, 7 ]
+
+5.Return all the palindromes in an array
+ans:- ?
